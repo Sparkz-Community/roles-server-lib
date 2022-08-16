@@ -1,0 +1,72 @@
+{
+  "name": "@ionrev/ir-roles-server",
+  "description": "roles plugin for FeathersJs server",
+  "version": "2.0.8",
+  "homepage": "https://gitlab.com/ionrev/ir-roles-server",
+  "main": "lib/",
+  "keywords": [
+    "feathers",
+    "feathers-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ionrev/ir-roles-server"
+  },
+  "author": {
+    "name": "IonRev Development",
+    "email": "dev@ionrev.com",
+    "url": "https://www.ionrev.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://gitlab.com/ionrev/ir-roles-server/issues"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "scripts": {
+    "release:pre": "npm version prerelease && npm publish --tag pre && git push origin",
+    "release:patch": "npm version patch && npm publish && git push origin",
+    "release:minor": "npm version minor && npm publish && git push origin",
+    "release:major": "npm version major && npm publish && git push origin",
+    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "test": "npm run lint && npm run coverage",
+    "coverage": "nyc npm run mocha",
+    "lint": "eslint --fix lib/. test/.",
+    "clean": "shx rm -rf test/data/",
+    "mocha": "npm run clean && NODE_ENV=test mocha test/ --timeout 5000 --recursive --exit"
+  },
+  "semistandard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@casl/ability": "^4.1.6",
+    "@casl/mongoose": "^6.0.0",
+    "@feathersjs/errors": "^4.5.10",
+    "@iy4u/common-utils": "^0.1.1",
+    "deepdash": "^5.3.5",
+    "feathers-hooks-common": "^5.0.4",
+    "feathers-mongoose": "^8.5.1",
+    "omit-deep-lodash": "^1.1.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^8.2.0",
+    "nyc": "^15.1.0",
+    "semistandard": "^15.0.0",
+    "shx": "^0.3.3",
+    "vuepress": "^1.5.2"
+  },
+  "peerDependencies": {
+    "@iy4u/common-server-lib": "2.x"
+  }
+}
