@@ -11,7 +11,7 @@ module.exports = function (app) {
     email: { type: String, unique: true, lowercase: true, required: true },
     password: { type: String, required: true },
     name: {type: String, required: false},
-    roles: [{type: Schema.Types.ObjectId, required: false, ref: 'ir-roles-roles'}],
+    roles: [{type: Schema.Types.ObjectId, required: false, ref: 'roles'}],
     theme: {
       darkMode: {type: Boolean, default: false},
       '--q-color-primary': { type: String, required: false, match: /^#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/ },

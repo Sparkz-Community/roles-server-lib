@@ -34,7 +34,7 @@ const rulesConfig = {
 };
 
 const attachUserRole = async context => {
-  let defaultUserRole = await context.app.service('ir-roles-roles').find({query: {name: 'Default Basic User'}, paginate: false});
+  let defaultUserRole = await context.app.service('roles').find({query: {name: 'Default Basic User'}, paginate: false});
   if (defaultUserRole.length) {
     let defaultId = defaultUserRole[0]._id;
     if (defaultId && context.data) {
