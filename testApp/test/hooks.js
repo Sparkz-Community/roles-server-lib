@@ -6,9 +6,9 @@ exports.mochaHooks = {
   beforeAll() {
     before(async() => {
       await mongoose.connection.collection('users').deleteMany({});
-      await mongoose.connection.collection('ir-roles-roles').deleteMany({});
-      await mongoose.connection.collection('ir-roles-abilities').deleteMany({});
-      await mongoose.connection.collection('ir-roles-rules').deleteMany({});
+      await mongoose.connection.collection('roles').deleteMany({});
+      await mongoose.connection.collection('abilities').deleteMany({});
+      await mongoose.connection.collection('rules').deleteMany({});
     });
     const userService = app.service('users');
     let user1 = {
@@ -44,9 +44,9 @@ exports.mochaHooks = {
     });
     it('should create user roles', async () => {
 
-      const rolesService = app.service('ir-roles-roles');
-      const abilitiesService = app.service('ir-roles-abilities');
-      const rulesService = app.service('ir-roles-rules');
+      const rolesService = app.service('roles');
+      const abilitiesService = app.service('abilities');
+      const rulesService = app.service('rules');
       assert.ok(rolesService, 'global rolesService service');
       assert.ok(abilitiesService, 'global abilitiesService service');
       assert.ok(rulesService, 'global rulesService service');
@@ -113,9 +113,9 @@ exports.mochaHooks = {
   },
   async afterAll() {
     await mongoose.connection.collection('users').deleteMany({});
-    await mongoose.connection.collection('ir-roles-roles').deleteMany({});
-    await mongoose.connection.collection('ir-roles-abilities').deleteMany({});
-    await mongoose.connection.collection('ir-roles-rules').deleteMany({});
+    await mongoose.connection.collection('roles').deleteMany({});
+    await mongoose.connection.collection('abilities').deleteMany({});
+    await mongoose.connection.collection('rules').deleteMany({});
   }
 };
 

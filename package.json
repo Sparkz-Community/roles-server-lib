@@ -1,8 +1,8 @@
 {
-  "name": "@ionrev/ir-roles-server",
+  "name": "@sparkz-community/roles-server-lib",
   "description": "roles plugin for FeathersJs server",
   "version": "2.0.8",
-  "homepage": "https://gitlab.com/ionrev/ir-roles-server",
+  "homepage": "https://github.com/Sparkz-Community/roles-server-lib",
   "main": "lib/",
   "keywords": [
     "feathers",
@@ -11,16 +11,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/ionrev/ir-roles-server"
+    "url": "https://github.com/Sparkz-Community/roles-server-lib"
   },
   "author": {
-    "name": "IonRev Development",
-    "email": "dev@ionrev.com",
-    "url": "https://www.ionrev.com"
+    "name": "Sparkz Community Development",
+    "email": "dev@sparkz.community",
+    "url": "https://sparkz.dev"
   },
   "contributors": [],
   "bugs": {
-    "url": "https://gitlab.com/ionrev/ir-roles-server/issues"
+    "url": "https://github.com/Sparkz-Community/roles-server-lib/issues"
   },
   "engines": {
     "node": ">= 6.0.0"

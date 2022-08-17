@@ -288,7 +288,7 @@ module.exports = {
       localPort: lget(process.env, 'MONGO_DB_PORT', 27017),
     },
   },
-  IrRoles: {
+  Roles: {
     serviceWhiteList: [],
     serviceBlackList: [],
     rules: {

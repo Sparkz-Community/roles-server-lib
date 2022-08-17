@@ -8,7 +8,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Services', link: '/services/' },
-      { text: 'Github', link: 'https://gitlab.com/ionrev/ir-roles-server' },
+      { text: 'Github', link: 'https://github.com/Sparkz-Community/roles-server-lib' },
     ],
     sidebar: [
       {
@@ -47,7 +47,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@ionrev/ir-roles-server': resolve(__dirname, '../../lib')
+        '@sparkz-community/roles-server-lib': resolve(__dirname, '../../lib')
       }
     }
   }

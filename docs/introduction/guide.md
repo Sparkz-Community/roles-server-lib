@@ -10,22 +10,22 @@ If you are using module bundlers such as Webpack, you can directly include packa
 NPM:
 
 ``` bash
-$ npm install @ionrev/ir-roles-server --save
+$ npm install @sparkz-community/roles-server-lib --save
 ```
 
 or Yarn:
 
 ``` bash
-$ yarn add @ionrev/ir-roles-server
+$ yarn add @sparkz-community/roles-server-lib
 ```
 
 ## FeathersJs plugin:
 
-Then register `@ionrev/iy-roles-server` services in your services index.js:
+Then register `@sparkz-community/iy-roles-server` services in your services index.js:
 
 ``` js
 // index.js
-const IrRolesServer = require('@ionrev/iy-roles-server');
+const IrRolesServer = require('@sparkz-community/roles-server-lib');
 
 // to configure all services
 IrRolesServer.services.configureServices(app);
@@ -36,7 +36,7 @@ IrRolesServer.services.configureServices(app, ['abilities']);
 
 
 // to configure services individually
-const {services: {roles, abilities, rules}} = require('@ionrev/iy-roles-server');
+const {services: {roles, abilities, rules}} = require('@sparkz-community/roles-server-lib');
 app.configure(roles)
 app.configure(abilities)
 app.configure(rules)

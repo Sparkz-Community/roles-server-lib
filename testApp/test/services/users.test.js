@@ -53,7 +53,7 @@ describe('\'users\' service', () => {
 
     describe('attach roles to user', () => {
       it('should attach a role to users', async () => {
-        let roles = await app.service('ir-roles-roles').find({query: {name: 'Default Basic User'}, paginate: false});
+        let roles = await app.service('roles').find({query: {name: 'Default Basic User'}, paginate: false});
         let role = roles[0];
         assert.ok(role, 'Default Basic User role should exist');
         user1 = await userService.patch(user1._id, {roles: [role._id]})
@@ -182,10 +182,10 @@ describe('\'users\' service', () => {
       });
 
       it('should add rule to allow user to remove without softDelete', async () => {
-        let rule = await app.service('ir-roles-rules').create({
+        let rule = await app.service('rules').create({
           name: 'users/remove', action: ['remove'], subject: 'users', conditions: {
             _id: {
-              [app.get('IrRoles').rules.keyPathName]: 'params.user._id',
+              [app.get('Roles').rules.keyPathName]: 'params.user._id',
             },
           },
           inAbilities: ['607476409a71e007b847fa5e'],
