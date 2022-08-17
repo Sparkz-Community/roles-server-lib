@@ -1,7 +1,7 @@
 {
   "name": "@sparkz-community/roles-server-lib",
   "description": "roles plugin for FeathersJs server",
-  "version": "2.0.8",
+  "version": "0.0.0",
   "homepage": "https://github.com/Sparkz-Community/roles-server-lib",
   "main": "lib/",
   "keywords": [
